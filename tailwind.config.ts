@@ -1,24 +1,25 @@
-const px0_10 = { ...[...Array(11)].map((_, i) => `${i}px`) };
-const px0_100 = { ...[...Array(101)].map((_, i) => `${i}px`) };
-const px0_600 = { ...[...Array(601)].map((_, i) => `${i}px`) };
+// tailwind.config.ts
+import type { Config } from 'tailwindcss';
 
-module.exports = {
-  content: ['./src/app/**/*.{js,ts,jsx,tsx,mdx}'],
+const rangePx = (max: number) => Object.fromEntries(Array.from({ length: max + 1 }, (_, i) => [String(i), `${i}px`]));
+
+const config: Config = {
+  content: ['./src/**/*.{js,ts,jsx,tsx}'], // app/와 pages/ 둘 다 커버
   theme: {
+    extend: {
+      borderWidth: rangePx(10),
+      borderRadius: rangePx(100),
+      fontSize: rangePx(100), // => text-20 => font-size: 20px
+      lineHeight: { ...rangePx(100), normal: 'normal' },
+      minWidth: rangePx(600),
+      minHeight: rangePx(600),
+      spacing: rangePx(600), // => p-20 => padding: 20px
+    },
     screens: {
       mo: '768px',
-      // => @media (min-width: 768px) { ... }
       pc: '1440px',
-      // => @media (min-width: 1440px) { ... }
-    },
-    extends: {
-      borderWidth: px0_10,
-      borderRadius: px0_100,
-      fontSize: px0_100,
-      lineHeight: { ...px0_100, normal: 'normal' },
-      minWidth: px0_600,
-      minHeight: px0_600,
-      spacing: { ...px0_600 },
     },
   },
 };
+
+export default config;

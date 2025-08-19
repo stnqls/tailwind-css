@@ -11,7 +11,7 @@ export default function page() {
       <Button variant={'outline'}>Outline Button</Button>
       <Button className="bg-amber-500 hover:bg-amber-600">Custom Button</Button>
       <br />
-      <h1>Button Size</h1>
+      <h1 className="text-20">Button Size</h1>
       <Button size={36}>Button Size 36</Button>
       <Button size={40}>Button Size 40</Button>
       <Button size={44}>Button Size 44</Button>

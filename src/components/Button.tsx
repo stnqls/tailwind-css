@@ -4,9 +4,9 @@ import { ButtonHTMLAttributes } from 'react';
 
 const buttonVariants = cva(
   // 기본 클래스
-  `inline-flex items-center justify-center rounded-lg font-medium 
-   transition-colors focus-visible:outline-none focus-visible:ring-2 
-   focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 
+  `inline-flex items-center justify-center rounded-8 text-14 
+   transition-colors focus-visible:outline-none focus-visible:ring-8 
+   focus-visible:ring-ring focus-visible:ring-offset-8 disabled:opacity-50 
    disabled:pointer-events-none hover:cursor-pointer`,
   {
     variants: {
@@ -18,10 +18,10 @@ const buttonVariants = cva(
         ghost: 'hover:bg-gray-100 hover:text-gray-900',
       },
       size: {
-        36: 'h-9 px-3 text-sm',
-        40: 'h-10 px-4 py-2',
-        44: 'h-11 px-8',
-        48: 'h-12 px-10 text-lg',
+        36: 'h-36 px-12 text-14',
+        40: 'h-40 px-16',
+        44: 'h-44 px-32',
+        48: 'h-48 px-40 text-18',
       },
       fullWidth: {
         true: 'w-full',
