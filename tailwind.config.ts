@@ -9,11 +9,11 @@ const config: Config = {
     extend: {
       borderWidth: rangePx(10),
       borderRadius: rangePx(100),
-      fontSize: rangePx(100), // => text-20 => font-size: 20px
+      fontSize: rangePx(100),
       lineHeight: { ...rangePx(100), normal: 'normal' },
       minWidth: rangePx(600),
       minHeight: rangePx(600),
-      spacing: rangePx(600), // => p-20 => padding: 20px
+      spacing: rangePx(600),
     },
     screens: {
       mo: '768px',
