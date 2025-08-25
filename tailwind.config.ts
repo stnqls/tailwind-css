@@ -13,6 +13,8 @@ const config: Config = {
       lineHeight: { ...rangePx(100), normal: 'normal' },
       minWidth: rangePx(600),
       minHeight: rangePx(600),
+      height: rangePx(600),
+      width: rangePx(600),
       spacing: rangePx(600),
     },
     screens: {
