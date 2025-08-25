@@ -11,10 +11,10 @@ const buttonVariants = cva(
   {
     variants: {
       size: {
-        36: 'h-36 px-12 text-14',
-        40: 'h-40 px-16 text-14',
-        44: 'h-44 px-32 text-18',
-        48: 'h-48 px-40 text-18',
+        36: 'h-36 px-12 body2_regular',
+        40: 'h-40 px-16 body1_regular',
+        44: 'h-44 px-32 heading2_bold',
+        48: 'h-48 px-40 heading1_bold',
       },
       variant: {
         primary: 'bg-blue-600 text-white hover:bg-blue-700',
